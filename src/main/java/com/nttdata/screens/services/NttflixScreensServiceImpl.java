@@ -14,30 +14,36 @@ import com.nttdata.screens.repository.NttflixScreensRepository;
 public class NttflixScreensServiceImpl implements NttflixScreensService {
 	
 	@Autowired
-	NttflixScreensRepository nttflixScreensRepository;
+	private NttflixScreensRepository nttflixScreensRepository;
 	
+	@Override
 	public ResponseScreen addScreen(RequestScreen requestScreen) {
-		// Implementar
+		nttflixScreensRepository.save(requestScreen.getScreenData());
 		return null;
 	}
 
+	@Override
 	public ResponseScreen getScreensNumber(RequestScreen requestScreen) {
-		// Implementar
+		Long screenNumber;
+		screenNumber = (long)nttflixScreensRepository.findAll().size();
 		return null;
 	}
-
+	
+	@Override
 	public ResponseScreen deleteScreen(RequestScreen requestScreen) {
-		// Implementar
+		nttflixScreensRepository.delete(requestScreen.getScreenData());
 		return null;
 	}
 
+	@Override
 	public List<ScreenData> getScreens(RequestScreen requestScreen) {
 		// Implementar
-		return null;
+		return nttflixScreensRepository.findAll();
 	}
 
+	@Override
 	public ResponseScreen updateScreen(RequestScreen requestScreen) {
-		// Implementar
+		nttflixScreensRepository.save(requestScreen.getScreenData());		
 		return null;
 	}
 }

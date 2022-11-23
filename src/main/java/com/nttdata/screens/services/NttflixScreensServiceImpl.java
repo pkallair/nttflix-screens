@@ -5,10 +5,11 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.nttdata.screens.NttflixScreensRepository.NttflixScreensRepository;
 import com.nttdata.screens.obj.RequestScreen;
 import com.nttdata.screens.obj.ResponseScreen;
 import com.nttdata.screens.obj.ScreenData;
+
+import repository.NttflixScreensRepository;
 
 @Service
 public class NttflixScreensServiceImpl implements NttflixScreensService {

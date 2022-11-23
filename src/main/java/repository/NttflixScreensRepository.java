@@ -1,4 +1,4 @@
-package com.nttdata.screens.NttflixScreensRepository;
+package repository;
 
 import org.springframework.stereotype.Repository;
 

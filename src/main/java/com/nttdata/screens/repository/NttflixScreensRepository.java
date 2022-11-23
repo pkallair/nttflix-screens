@@ -1,4 +1,4 @@
-package repository;
+package com.nttdata.screens.repository;
 
 import org.springframework.stereotype.Repository;
 

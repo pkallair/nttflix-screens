@@ -8,8 +8,7 @@ import org.springframework.stereotype.Service;
 import com.nttdata.screens.obj.RequestScreen;
 import com.nttdata.screens.obj.ResponseScreen;
 import com.nttdata.screens.obj.ScreenData;
-
-import repository.NttflixScreensRepository;
+import com.nttdata.screens.repository.NttflixScreensRepository;
 
 @Service
 public class NttflixScreensServiceImpl implements NttflixScreensService {

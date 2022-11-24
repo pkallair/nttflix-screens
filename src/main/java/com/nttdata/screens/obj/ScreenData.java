@@ -1,9 +1,22 @@
 package com.nttdata.screens.obj;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "EMPLOYEE")
 public class ScreenData {
+	
+	@Id
+	@Column(name = "ID")
 	Long id; 
+	@Column(name = "DEVICE")
 	String device; 
+	@Column(name = "MAC")
 	String mac; 
+	@Column(name = "USERNAME")
 	String username;
 	
 	public ScreenData() {

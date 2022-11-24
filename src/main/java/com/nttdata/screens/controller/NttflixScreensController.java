@@ -23,31 +23,26 @@ public class NttflixScreensController {
 	
 	@PostMapping(value = "/api/screens") 
 	public ResponseScreen addScreen(@RequestBody RequestScreen requestScreen) {
-		
 		return nttflixScreensService.addScreen(requestScreen);
 	}
 
 	@GetMapping(value = "/api/screens") 
 	public List<ScreenData> getScreens(@RequestBody RequestScreen requestScreen) {
-		
 		return nttflixScreensService.getScreens(requestScreen);
 	}
 
 	@GetMapping(value = "/api/screens/number") 
 	public ResponseScreen getScreensNumber(@RequestBody RequestScreen requestScreen) {
-		
 		return nttflixScreensService.getScreensNumber(requestScreen);
 	}
 
 	@DeleteMapping(value = "/api/screens") 
 	public ResponseScreen deleteScreen(@RequestBody RequestScreen requestScreen) {
-		
 		return nttflixScreensService.deleteScreen(requestScreen);
 	}
 
 	@PutMapping(value = "/api/screens") 
 	public ResponseScreen updateScreen(@RequestBody RequestScreen requestScreen) {
-		
 		return nttflixScreensService.updateScreen(requestScreen);
 	}
 }

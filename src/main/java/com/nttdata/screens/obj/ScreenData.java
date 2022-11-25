@@ -7,7 +7,7 @@ import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
 @Entity
-@Table( name = "EMPLOYEE",
+@Table( name = "SCREENS",
 		uniqueConstraints={@UniqueConstraint(columnNames={"MAC", "USERNAME"})})
 public class ScreenData {
 	

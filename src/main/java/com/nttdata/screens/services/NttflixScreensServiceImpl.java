@@ -38,7 +38,7 @@ public class NttflixScreensServiceImpl implements NttflixScreensService {
 	@Override
 	public ResponseScreen deleteScreen(RequestScreen requestScreen) {
 		Optional<ScreenData> resultado = nttflixScreensRepository.findById(requestScreen.getScreenData().getId());
-		if (resultado.isEmpty()) nttflixScreensRepository.delete(requestScreen.getScreenData());
+		if (!resultado.isEmpty()) nttflixScreensRepository.delete(requestScreen.getScreenData());
 		else System.out.println("Error: no existe ninguna entrada con id = " + requestScreen.getScreenData().getId().toString());
 		return null;
 	}

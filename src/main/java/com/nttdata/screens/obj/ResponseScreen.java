@@ -25,5 +25,4 @@ public class ResponseScreen {
 		this.userData = userData;
 	}
 	
-	
 }

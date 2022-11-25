@@ -4,18 +4,20 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 
 @Entity
-@Table(name = "EMPLOYEE")
+@Table( name = "EMPLOYEE",
+		uniqueConstraints={@UniqueConstraint(columnNames={"MAC", "USERNAME"})})
 public class ScreenData {
 	
 	@Id
 	@Column(name = "ID")
-	Long id; 
+	Long id;
 	@Column(name = "DEVICE")
-	String device; 
+	String device;
 	@Column(name = "MAC")
-	String mac; 
+	String mac;
 	@Column(name = "USERNAME")
 	String username;
 	

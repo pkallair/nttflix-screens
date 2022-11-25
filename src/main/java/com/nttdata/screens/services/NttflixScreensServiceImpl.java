@@ -21,8 +21,8 @@ public class NttflixScreensServiceImpl implements NttflixScreensService {
 	@Override
 	public ResponseScreen addScreen(RequestScreen requestScreen) {
 		Optional<ScreenData> resultado = nttflixScreensRepository.findById(requestScreen.getScreenData().getId());
-		if (resultado.isEmpty()) nttflixScreensRepository.save(requestScreen.getScreenData());
-		else System.out.println("Error: ya existe una entrada con id = " + requestScreen.getScreenData().getId().toString());
+		///////
+		nttflixScreensRepository.save(requestScreen.getScreenData());
 		return null;
 	}
 
